@@ -1,0 +1,4 @@
+<map id="Player.Player.Kill" name="Player.Player.Kill">
+<area shape="rect" id="node1" title="Logic to be executed when the player is killed." alt="" coords="5,13,128,38"/>
+<area shape="rect" id="node2" href="$class_player_1_1_player_movement.html#a6e04f6327d4b7e5db91efbbed580966e" title="Stops all movements, current one and next one." alt="" coords="176,5,367,45"/>
+</map>
