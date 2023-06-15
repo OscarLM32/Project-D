@@ -17,10 +17,9 @@ namespace Items
             {
                 Debug.LogError("The classified document has not been properly set up");
                 return;
-            } 
-            
+            }
             SaveLoadManager.Instance.AddPickedClassifiedDocument(position);
-            StartCoroutine(PickUpAction()); 
+            StartCoroutine(PickUpAction());
         }
     }
 }

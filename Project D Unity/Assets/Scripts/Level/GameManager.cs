@@ -4,6 +4,7 @@ using CoreSystems.InputSystem;
 using CoreSystems.MenuSystem;
 using CoreSystems.SaveLoadSystem;
 using CoreSystems.SceneSystem;
+using Level.DifficultySettings;
 using UnityEngine;
 using AudioType = CoreSystems.AudioSystem.AudioType;
 
@@ -14,50 +15,64 @@ namespace Level
     /// </summary>
     public class GameManager : MonoBehaviour
     {
-        public static GameManager instance;
+        public static GameManager Instance;
+
+        public Difficulties difficulty = Difficulties.EASY;
+        public SOLevelRulesDifficultySettings difficultySettings;
         
         [SerializeField]private Player.Player _player;
+        [SerializeField] private Timer _timer;
 
         [Space]
         public AudioTrack[] tracks;
 
         private Vector2 _playerSpawnPoint;
+        private Quaternion _playerSpawnRotation;
         [SerializeField]private int _maxPlayerDeaths = 1;
-        private int _playerDeaths = 0;
+        private int _playerDeaths;
+
+        private const int _extraTimeFactor = 10; //The amount of extra time each upgrades gives the player
+        
+        private const float _timerWaitTimeBeforeStart = 2f;
 
         public Vector2 playerSpawnPoint
         {
             set => _playerSpawnPoint = value;
         }
 
+        public Quaternion playerSpawnRotation
+        {
+            set => _playerSpawnRotation = value;
+        }
+
         #region Unity functions    
         private void Awake()
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 Destroy(gameObject);
                 return;
             }
-            instance = this;
+            Instance = this;
         }
 
         private void Start()
         {
             Configure();
-            //Cannot add this into configure because the instance may not have been created already
-            AudioController.instance.PlayAudio(AudioType.ST_NAUTILUS, gameObject, 1, 0.5f);
         }
 
         private void OnEnable()
         {
             GameEvents.LevelFinished += FinishLevel;
             GameEvents.PlayerDeath += OnPlayerDeath;
+            GameEvents.TimeRanOut += ExitLevel;
         }
 
         private void OnDisable()
         {
             GameEvents.LevelFinished -= FinishLevel; 
             GameEvents.PlayerDeath -= OnPlayerDeath; 
+            GameEvents.TimeRanOut -= ExitLevel; 
         }
 
         #endregion    
@@ -95,8 +110,29 @@ namespace Level
         private void Configure()
         {
             AudioController.instance.AddTracks(tracks, gameObject); 
+            AudioController.instance.PlayAudio(AudioType.ST_NAUTILUS, gameObject, 1, 0.5f);
+
             _playerSpawnPoint = _player.gameObject.transform.position;
-            _maxPlayerDeaths += SaveLoadManager.Instance.GetTimesUpgradeWasBought(UpgradeType.LIFE);
+            
+            ApplyDifficultySettings();
+        }
+
+        private int CalculateExtraTime()
+        {
+            var extraTime = SaveLoadManager.Instance.GetTimesUpgradeWasBought(UpgradeType.TIME) * _extraTimeFactor;
+            return extraTime;
+        }
+
+        private void ApplyDifficultySettings()
+        {
+            var extraTime = CalculateExtraTime();
+            var extraLives = SaveLoadManager.Instance.GetTimesUpgradeWasBought(UpgradeType.LIFE);
+
+            extraTime += difficultySettings.extraTime[(int)difficulty];
+            extraLives += difficultySettings.extraLives[(int)difficulty];
+            
+            _timer.SetUpTimer(extraTime, _timerWaitTimeBeforeStart);
+            _maxPlayerDeaths += extraLives >= 0 ? extraLives : 0;
         }
 
         /// <summary>
@@ -120,10 +156,10 @@ namespace Level
         /// <returns>A coroutine</returns>
         private IEnumerator PlayerRespawn()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             
             _player.gameObject.transform.position = _playerSpawnPoint;
-            GameEvents.PlayerRespawn?.Invoke();
+            GameEvents.PlayerRespawn?.Invoke(_playerSpawnRotation);
             InputManager.Instance.EnableInputs();
         }
         

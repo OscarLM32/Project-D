@@ -3,6 +3,7 @@ using CoreSystems.InputSystem;
 using Items;
 using Level;
 using UnityEngine;
+using AudioType = CoreSystems.AudioSystem.AudioType;
 
 namespace Player
 {
@@ -19,6 +20,7 @@ namespace Player
         private PlayerInput _input;
         
         private Collider2D _col;
+        [SerializeField]private Animator _animator;
         
     #region Unity functions
         
@@ -70,10 +72,8 @@ namespace Player
             //Notify the event
             GameEvents.PlayerDeath?.Invoke();
             
-            //TODO: Finish Player "kill" logic
-            //Play death audio and animation
-            //AudioController.instance.PlayAudio();
-            //_animator.Play("PlayerDeath")
+            _animator.Play(PlayerAnimations.Death.ToString());
+            AudioController.instance.PlayAudio(AudioType.SFX_PLAYER_DEATH, gameObject);
         }
     
         #endregion
@@ -92,11 +92,11 @@ namespace Player
         /// <summary>
         /// Logic to handle whenever the player is spawned
         /// </summary>
-        private void OnPlayerRespawn()
+        private void OnPlayerRespawn(Quaternion rotation)
         {
-            //TODO: finish player respawn logic
-            //AudioController.instance.PlayAudio();
-            //_animator.Play("PlayerIdle")
+            transform.rotation = rotation;
+            AudioController.instance.PlayAudio(AudioType.SFX_MOVEMENT_LANDING, gameObject);
+            _animator.Play(PlayerAnimations.Idle.ToString());
             _col.enabled = true;
         }
         

@@ -13,7 +13,8 @@ namespace CoreSystems.MenuSystem
         EXTRAS_MENU,
         EXTRA,
         SHOP_MENU,
-        LEVEL_LOAD
+        LEVEL_LOAD,
+        LOCALIZATION_MENU
     } 
 }
 

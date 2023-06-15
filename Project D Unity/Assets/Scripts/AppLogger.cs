@@ -46,6 +46,7 @@ public static class AppLogger
         }
     }
     
+    //Activation or deactivation of the debugs
     private static readonly bool MenuSystem = true;
     private static readonly bool SaveLoadSystem = true;
     private static readonly bool Player = true;

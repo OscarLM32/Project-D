@@ -10,7 +10,7 @@ namespace MainMenu
     /// </summary>
     public class CurrencyPresenter : MonoBehaviour
     {
-        public static Action UpdateInformation;
+        public static Action<int> UpdateCurrencyPresentation;
         
         public TextMeshProUGUI information;
         public TextMeshProUGUI classifiedDocuments;
@@ -23,20 +23,20 @@ namespace MainMenu
 
         private void OnEnable()
         {
-            UpdateInformation += OnInformationUpdate;
+            UpdateCurrencyPresentation += OnInformationUpdate;
         }
 
         private void OnDisable()
         {
-            UpdateInformation -= OnInformationUpdate;
+            UpdateCurrencyPresentation -= OnInformationUpdate;
         }
 
         /// <summary>
         /// Logic to be executed when the information value 
         /// </summary>
-        private void OnInformationUpdate()
+        private void OnInformationUpdate(int newValue)
         {
-            information.text = SaveLoadManager.Instance.GetInformation().ToString(); 
+            information.text = newValue.ToString();
         }
     }
 }

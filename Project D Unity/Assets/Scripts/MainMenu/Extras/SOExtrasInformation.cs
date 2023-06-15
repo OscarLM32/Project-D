@@ -9,8 +9,5 @@ namespace MainMenu.Extras
     public class SOExtrasInformation : ScriptableObject
     {
         public int[] values;
-
-        [TextArea]
-        public string[] texts;
     }
 }

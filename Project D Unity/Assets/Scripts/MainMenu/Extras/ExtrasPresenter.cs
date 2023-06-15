@@ -4,6 +4,7 @@ using CoreSystems.MenuSystem;
 using CoreSystems.SaveLoadSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace MainMenu.Extras
@@ -31,17 +32,25 @@ namespace MainMenu.Extras
         {
             PopulateExtras();
             SetUpExtrasInformation();
+            SetUpExtrasTitles();
             CheckExtrasInteractable();
         }
 
         private void OnEnable()
         {
             ExtraSelected += OnExtraSelected;
+            MainMenuEvents.LocaleChanged += OnLocaleChange;
         }
 
         private void OnDisable()
         {
             ExtraSelected -= OnExtraSelected; 
+            //MainMenuEvents.LocaleChanged -= OnLocaleChange; 
+        }
+
+        private void OnDestroy()
+        {
+            MainMenuEvents.LocaleChanged -= OnLocaleChange; 
         }
 
         /// <summary>
@@ -67,8 +76,31 @@ namespace MainMenu.Extras
             for (int i = 0; i < _extras.Count; i++)
             {
                 var extra = _extras[i].GetComponent<Extra>();
+                LocalizedString table = new LocalizedString
+                {
+                    TableReference = StringTables.Dynamic_UI.ToString(),
+                    TableEntryReference = "EXTRA_STORY_"+(i+1)
+                };
+                var story = table.GetLocalizedString(); 
                 extra.value = extrasInformation.values[i];
-                extra.story = extrasInformation.texts[i];
+                extra.story = story;
+            }
+        }
+
+        private void SetUpExtrasTitles()
+        {
+            LocalizedString table = new LocalizedString
+            {
+                TableReference = StringTables.Dynamic_UI.ToString(),
+                TableEntryReference = "EXTRA_TITLE"
+            };
+            var titleText = table.GetLocalizedString();
+            
+            for (int i = 0; i < _extras.Count; i++)
+            {
+                //TODO: there must be a better way to access the title
+                var title = _extras[i].transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+                title.text = titleText + i;
             }
         }
 
@@ -98,6 +130,17 @@ namespace MainMenu.Extras
         {
             extraStory.text = story;
             PageController.instance.TurnPageOn(PageType.EXTRA);
+        }
+
+        private void OnLocaleChange()
+        {
+            SetUpExtrasInformation();
+            SetUpExtrasTitles();
+            foreach (var extraObject in _extras)
+            {
+                var extra = extraObject.GetComponent<Extra>();
+                extra.DisplayNeededClassifiedDocuments();
+            }
         }
     }
 }

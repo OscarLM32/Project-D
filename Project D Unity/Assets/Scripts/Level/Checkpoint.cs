@@ -18,7 +18,10 @@ namespace Level
             Player.Player player = other.GetComponent<Player.Player>();
             if (player)
             {
-                GameManager.instance.playerSpawnPoint = transform.position;
+                GameManager.Instance.playerSpawnPoint = transform.position;
+                var spawnRotation = other.transform.rotation;
+                spawnRotation.eulerAngles += new Vector3(0,0,180);
+                GameManager.Instance.playerSpawnRotation = spawnRotation;
             }
         }
 

@@ -31,6 +31,8 @@ namespace CoreSystems.SaveLoadSystem
         [SerializeField]private GameData _gameData;
         [SerializeField]private TemporalGameData _tempGameData;
 
+        private bool _inMainMenu = false;
+
         /// <summary>
         /// Get the current scene name
         /// </summary>
@@ -59,10 +61,13 @@ namespace CoreSystems.SaveLoadSystem
         public void Save()
         {
             FileStream stream = new FileStream(_savePath, FileMode.OpenOrCreate);
-        
-            AddTemporalDataToSavedData();
-            CheckCurrentLevelIsMaxLevelReached();
-            
+
+            if (!_inMainMenu)
+            {
+                AddTemporalDataToSavedData();
+                CheckCurrentLevelIsMaxLevelReached();
+            }
+
             _formatter.Serialize(stream, _gameData);
             stream.Close();
             
@@ -150,8 +155,8 @@ namespace CoreSystems.SaveLoadSystem
         /// Sets the data after buying an upgrade from the game store
         /// </summary>
         /// <param name="type">The upgrade type</param>
-        /// <param name="value">The cost</param>
-        public void BuyUpgrade(UpgradeType type, int value)
+        /// <param name="newAmount">The new information amount</param>
+        public void UpgradeBought(UpgradeType type, int newAmount)
         {
             if (!_gameData.upgradesBought.ContainsKey(type))
             {
@@ -161,10 +166,7 @@ namespace CoreSystems.SaveLoadSystem
             {
                 _gameData.upgradesBought[type]++;
             }
-
-            _gameData.information -= value;
-            //TODO: solve this huge dependency
-            CurrencyPresenter.UpdateInformation?.Invoke();
+            _gameData.information = newAmount;
 
             Save();
         }
@@ -195,8 +197,20 @@ namespace CoreSystems.SaveLoadSystem
             Instance = this;
             _savePath = Application.persistentDataPath + "/gameData.save";
             _formatter = new BinaryFormatter();
+
+            CheckCurrentSceneIsMainMenu();
+            
             Load();
+            
             //DontDestroyOnLoad(gameObject);
+        }
+
+        //TODO: this may be possible to be handled by the scene system 
+        private bool CheckCurrentSceneIsMainMenu()
+        {
+            string name = currentSceneName.Substring(0, 5);
+            //AppLogger.Log(DebugFlag.SAVE_LOAD_SYSTEM, name);
+            return name == "Level";
         }
 
         /// <summary>
@@ -261,10 +275,9 @@ namespace CoreSystems.SaveLoadSystem
             //All the "level" scenes are named "Level" followed by the number with no space.
             string sNum = currentSceneName.Substring(5); //It can be also written as [5..]
             int lvl = 0;
-            //TODO: this is caused because of a huge dependency between save load manager and presenters
             try
             {
-                lvl = int.Parse(sNum);  
+                lvl = int.Parse(sNum);
             }
             catch (Exception e)
             {

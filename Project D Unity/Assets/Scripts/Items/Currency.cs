@@ -8,13 +8,11 @@ namespace Items
     /// </summary>
     public abstract class Currency : MonoBehaviour, IPickable
     {
-        private Animator _animator;
         private AudioSource _source;
         private Collider2D _collider; 
         
         protected void Start()
         {
-            _animator = GetComponent<Animator>();
             _source = GetComponent<AudioSource>();
             _collider = GetComponent<Collider2D>(); 
         }
@@ -30,14 +28,10 @@ namespace Items
         /// <returns></returns>
         protected IEnumerator PickUpAction()
         {
-            _animator.Play("Collection");
             _source.Play();
             _collider.enabled = false;
 
-            while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
-            {
-                yield return null;
-            }
+            yield return new WaitForSeconds(0.1f);
             Destroy(gameObject);
         }  
     }

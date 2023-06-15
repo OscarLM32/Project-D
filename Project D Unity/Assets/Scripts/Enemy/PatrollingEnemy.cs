@@ -19,7 +19,7 @@ namespace Enemy
         private const PathMode _pathMode = PathMode.Sidescroller2D;
         private const int _resolution = 0;//The resolution is useless in linear paths. 
 
-        private const LoopType _loopType = LoopType.Yoyo; 
+        [SerializeField]private LoopType _loopType = LoopType.Yoyo; 
         private const int _loops = -1; //Infinite
         
         private void Start()

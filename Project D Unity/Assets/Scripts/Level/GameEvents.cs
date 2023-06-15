@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Level
 {
@@ -9,7 +10,7 @@ namespace Level
     {
         public static Action LevelFinished;
         public static Action PlayerDeath;
-        public static Action PlayerRespawn;
+        public static Action<Quaternion> PlayerRespawn;
         public static Action TimeRanOut;
     }
 }

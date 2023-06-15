@@ -1,4 +1,5 @@
-﻿using CoreSystems.AudioSystem;
+﻿using System.Collections;
+using CoreSystems.AudioSystem;
 using UnityEngine;
 using AudioType = CoreSystems.AudioSystem.AudioType;
 using Vector2 = UnityEngine.Vector2;
@@ -23,7 +24,10 @@ namespace Player
 
         public bool debug;
         
+        
         [SerializeField]private LayerMask _groundLayer;
+
+        [SerializeField] private Animator _animator;
 
         /// <summary>
         /// Where the input signals the player wants to be
@@ -53,12 +57,12 @@ namespace Player
         
         private readonly Vector2 _zero = Vector2.zero; //Abbreviation of Vector2.zero 
         private const float _speed = 40f;
-        
+
         /// <summary>
         /// Visual extent of the character
         /// </summary>
         private const float _characterExtent = 0.5f;
-        
+
         #region Unity Functions    
 
         private void Update()
@@ -146,10 +150,14 @@ namespace Player
                 return;
             }
             
+            HandleJumpingCharacterRotation();
+            StopCoroutine(HandleLandingAnimation());
+            
             _initialPosition = position;
             _distanceToDesiredPosition = Vector2.Distance(_initialPosition, _desiredPosition);
 
             _currentMovementState = MovementState.MOVING;
+            _animator.Play(PlayerAnimations.Jump.ToString());
             
             Log("New movement to " + _desiredPosition + " has been set up");
         }
@@ -186,11 +194,55 @@ namespace Player
         //The current movement has been completed
         private void FinishMovement()
         {
+            HandleLandingCharacterRotation();
+            StartCoroutine(HandleLandingAnimation()); 
+            
             DisposeCurrentMovement();
             
-            AudioController.instance.PlayAudio(AudioType.SFX_MOVEMENT_LANDING, gameObject); 
-
+            AudioController.instance.PlayAudio(AudioType.SFX_MOVEMENT_LANDING, gameObject);
+            
             StartNextMovement(); 
+        }
+
+        private void HandleJumpingCharacterRotation()
+        {
+            transform.rotation = new Quaternion();
+
+            if (_currentMovement == Vector2.right)
+            {
+                transform.Rotate(new Vector3(0,0,270));
+            }
+            else if (_currentMovement == Vector2.down)
+            {
+                transform.Rotate(new Vector3(0,0,180));
+            }
+            else if (_currentMovement == Vector2.left)
+            {
+                transform.Rotate(new Vector3(0,0, 90));
+            }
+        }
+
+        private void HandleLandingCharacterRotation()
+        {
+            transform.Rotate(new Vector3(0,0,180));
+        }
+
+        //Todo: it probably is easier to use animator variables to handle this logic
+        private IEnumerator HandleLandingAnimation()
+        {
+            _animator.Play(PlayerAnimations.Land.ToString());
+
+            while (!_animator.GetCurrentAnimatorStateInfo(0).IsName(PlayerAnimations.Land.ToString()))
+            {
+                yield return null;
+            }
+
+            while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
+            {
+                yield return null;
+            }
+            
+            _animator.Play(PlayerAnimations.Idle.ToString());
         }
         
         private void Log(string msg)

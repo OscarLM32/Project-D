@@ -17,6 +17,10 @@ namespace Level
             AudioController.instance.AddTracks(tracks, gameObject);
         }
 
+        /// <summary>
+        /// Handles the logic for leaving the level
+        /// </summary>
+        /// <param name="other">The other game object</param>
         private void OnTriggerEnter2D(Collider2D other)
         {
             Player.Player player = other.GetComponent<Player.Player>();

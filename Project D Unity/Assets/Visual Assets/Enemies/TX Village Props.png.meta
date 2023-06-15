@@ -1,0 +1,349 @@
+fileFormatVersion: 2
+guid: b51cf17212198d1408c400277cf8c084
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TX Village Props_1
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1004
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8483cc2f64f5c4da36f9b9742114ca
+      internalID: 1515940482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TX Village Props_170: -850583249
+      TX Village Props_40: -223170738
+      TX Village Props_65: 531713682
+      TX Village Props_68: 1200215214
+      TX Village Props_18: -787066285
+      TX Village Props_2: -1652572402
+      TX Village Props_87: -1315253195
+      TX Village Props_17: 947785457
+      TX Village Props_105: 369669593
+      TX Village Props_115: -234616970
+      TX Village Props_110: -999799026
+      TX Village Props_138: -323625190
+      TX Village Props_137: -2044464983
+      TX Village Props_155: 1684902609
+      TX Village Props_46: -1056013157
+      TX Village Props_146: -1391230261
+      TX Village Props_99: -1262207616
+      TX Village Props_84: 2064349477
+      TX Village Props_41: -2031596514
+      TX Village Props_49: -1422572033
+      TX Village Props_62: 1416602648
+      TX Village Props_120: -1049933451
+      TX Village Props_144: 767749412
+      TX Village Props_34: 635794181
+      TX Village Props_86: 193063369
+      TX Village Props_53: -703649445
+      TX Village Props_149: -1050856820
+      TX Village Props_143: 337629963
+      TX Village Props_111: -2104792224
+      TX Village Props_78: -143623278
+      TX Village Props_113: 1465323161
+      TX Village Props_153: 994940996
+      TX Village Props_152: -2072534620
+      TX Village Props_160: 1526068930
+      TX Village Props_16: 136141215
+      TX Village Props_102: -1180416374
+      TX Village Props_27: 1338839138
+      TX Village Props_7: 1875602768
+      TX Village Props_122: -1560328602
+      TX Village Props_32: 1353818056
+      TX Village Props_142: -1162615103
+      TX Village Props_26: 1378413579
+      TX Village Props_36: -498866068
+      TX Village Props_129: -1723448727
+      TX Village Props_39: 1395103148
+      TX Village Props_106: 1058918581
+      TX Village Props_125: 609953111
+      TX Village Props_73: 1133986458
+      TX Village Props_118: 1423942656
+      TX Village Props_13: 1594673690
+      TX Village Props_79: 239611415
+      TX Village Props_109: 767292924
+      TX Village Props_131: 1888191323
+      TX Village Props_154: 1953369038
+      TX Village Props_94: -1482821836
+      TX Village Props_90: -347254639
+      TX Village Props_59: -295147770
+      TX Village Props_156: -1836384482
+      TX Village Props_175: -1041561125
+      TX Village Props_135: 427356827
+      TX Village Props_55: 1544735234
+      TX Village Props_42: 777522723
+      TX Village Props_163: 519055453
+      TX Village Props_114: -1773056638
+      TX Village Props_67: -1694218324
+      TX Village Props_128: -2005462608
+      TX Village Props_96: 1238039260
+      TX Village Props_56: 1674518100
+      TX Village Props_35: 544572754
+      TX Village Props_25: -162976008
+      TX Village Props_3: 1373860141
+      TX Village Props_69: 1566144992
+      TX Village Props_20: -571407999
+      TX Village Props_140: -327677077
+      TX Village Props_72: 2124910140
+      TX Village Props_112: -998925565
+      TX Village Props_176: -1039900281
+      TX Village Props_91: 489153422
+      TX Village Props_162: -138377502
+      TX Village Props_173: 508393182
+      TX Village Props_141: -1205755628
+      TX Village Props_180: -1236191863
+      TX Village Props_101: -1650817527
+      TX Village Props_134: 744339168
+      TX Village Props_121: -1696000960
+      TX Village Props_151: -1436140673
+      TX Village Props_167: -265876096
+      TX Village Props_6: -1058203672
+      TX Village Props_74: 849356845
+      TX Village Props_123: -291589166
+      TX Village Props_45: -390012518
+      TX Village Props_11: -1074216818
+      TX Village Props_161: 1853281961
+      TX Village Props_98: 1892031396
+      TX Village Props_66: 426824383
+      TX Village Props_172: 1426311797
+      TX Village Props_177: -229320318
+      TX Village Props_33: 1714590372
+      TX Village Props_28: -1361693621
+      TX Village Props_30: 1621130213
+      TX Village Props_166: 1423933506
+      TX Village Props_9: 262242769
+      TX Village Props_92: -534837104
+      TX Village Props_77: -1836148410
+      TX Village Props_174: 1045934520
+      TX Village Props_37: -80111018
+      TX Village Props_75: -308783675
+      TX Village Props_97: 1200568033
+      TX Village Props_43: 272504356
+      TX Village Props_22: 432107504
+      TX Village Props_50: 2091853683
+      TX Village Props_21: -1945695229
+      TX Village Props_100: 1075775283
+      TX Village Props_88: -844988428
+      TX Village Props_12: 1737595880
+      TX Village Props_164: -224160461
+      TX Village Props_8: 2113197464
+      TX Village Props_150: 1019106998
+      TX Village Props_57: -1430451956
+      TX Village Props_63: -713579319
+      TX Village Props_179: -2119776900
+      TX Village Props_58: -848952758
+      TX Village Props_70: 507818660
+      TX Village Props_71: 1295766976
+      TX Village Props_15: 379190681
+      TX Village Props_117: 822274967
+      TX Village Props_104: -1049459002
+      TX Village Props_80: -1818579865
+      TX Village Props_0: 319792424
+      TX Village Props_4: 1121700911
+      TX Village Props_60: 1135545381
+      TX Village Props_148: -1496123991
+      TX Village Props_116: 334820431
+      TX Village Props_44: 353376393
+      TX Village Props_64: 372619284
+      TX Village Props_165: 1100496162
+      TX Village Props_14: 1376838981
+      TX Village Props_136: 643777464
+      TX Village Props_24: -64843112
+      TX Village Props_124: -1491420977
+      TX Village Props_38: -1500872871
+      TX Village Props_76: -1438667714
+      TX Village Props_19: -1294689715
+      TX Village Props_93: 39802342
+      TX Village Props_169: 1350530156
+      TX Village Props_81: 179926805
+      TX Village Props_103: -1436978589
+      TX Village Props_139: 629378508
+      TX Village Props_82: 1853415091
+      TX Village Props_95: 2889742
+      TX Village Props_83: 384746842
+      TX Village Props_159: -2117812129
+      TX Village Props_145: 1334216980
+      TX Village Props_52: -1325980276
+      TX Village Props_29: -536170476
+      TX Village Props_61: 1643877896
+      TX Village Props_107: -1655530372
+      TX Village Props_48: -1429030233
+      TX Village Props_51: -1156362488
+      TX Village Props_147: -1637107579
+      TX Village Props_126: -959311741
+      TX Village Props_85: -751909249
+      TX Village Props_132: 2077505566
+      TX Village Props_133: 310800235
+      TX Village Props_10: -46367439
+      TX Village Props_178: 193211700
+      TX Village Props_5: 1216545118
+      TX Village Props_158: -1953501094
+      TX Village Props_23: -423243645
+      TX Village Props_31: -1613869895
+      TX Village Props_47: -696705692
+      TX Village Props_108: -460532356
+      TX Village Props_119: -2006022840
+      TX Village Props_1: 1515940482
+      TX Village Props_130: 1100305220
+      TX Village Props_168: 2032786755
+      TX Village Props_171: -933299589
+      TX Village Props_89: -64730312
+      TX Village Props_127: -1968209945
+      TX Village Props_54: 170569023
+      TX Village Props_157: -1964758409
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

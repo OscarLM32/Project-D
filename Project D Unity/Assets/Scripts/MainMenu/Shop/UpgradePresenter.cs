@@ -44,13 +44,15 @@ namespace MainMenu.Shop
         /// </summary>
         public void BuyUpgrade()
         {
-            var currentPrice = upgradePrices.prices[_upgradesBought];
-            if (currentPrice > SaveLoadManager.Instance.GetInformation())
-            {
-                return;
-            }
+            var price = upgradePrices.prices[_upgradesBought];
+            var currencyAmount = SaveLoadManager.Instance.GetInformation(); 
             
-            SaveLoadManager.Instance.BuyUpgrade(type, currentPrice);
+            //If not amount currency
+            if (price > currencyAmount) return;
+
+            var newCurrencyAmount = currencyAmount - price;
+            CurrencyPresenter.UpdateCurrencyPresentation(newCurrencyAmount);
+            SaveLoadManager.Instance.UpgradeBought(type, newCurrencyAmount);
             _upgradesBought++; 
             UpdateText();
         }

@@ -9,6 +9,6 @@
         ST_NAUTILUS,
         SFX_VICTORY,
         SFX_MOVEMENT_LANDING,
-        SFX_CURRENCY_COLLECTION,
+        SFX_PLAYER_DEATH
     }
 }

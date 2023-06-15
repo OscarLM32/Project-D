@@ -2,6 +2,7 @@
 using CoreSystems.SaveLoadSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace MainMenu.Extras
 {
@@ -34,7 +35,14 @@ namespace MainMenu.Extras
             var obtained = SaveLoadManager.Instance.GetClassifiedDocuments();
             if (obtained >= value)
             {
-                display.text = "OBTAINED!";
+                LocalizedString table = new LocalizedString
+                {
+                    TableReference = StringTables.Dynamic_UI.ToString(),
+                    TableEntryReference = "EXTRA_UNLOCKED"
+                };
+                
+                var msg = table.GetLocalizedString();
+                display.text = msg;
             }
             else
             {
