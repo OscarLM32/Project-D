@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['up_0',['Up',['../class_shooting_enemy.html#a2533e230f6cf5997b09ce30f29d912eba258f49887ef8d14ac268c92b02503aaa',1,'ShootingEnemy']]]
+  ['right_0',['RIGHT',['../class_enemy_1_1_shooting_enemy_1_1_shooting_enemy.html#a4311e3108cb209d739a7aace3a892d70a21507b40c80068eda19865706fdc2403',1,'Enemy::ShootingEnemy::ShootingEnemy']]]
 ];

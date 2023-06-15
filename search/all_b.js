@@ -1,10 +1,22 @@
 var searchData=
 [
-  ['extras_0',['Extras',['../namespace_main_menu_1_1_extras.html',1,'MainMenu']]],
-  ['main_5fmenu_1',['MAIN_MENU',['../namespace_core_systems_1_1_scene_system.html#aa27913a26162399e428fcbf01a744950aa16d505f03a4b6f35486f65f6a61317e',1,'CoreSystems::SceneSystem']]],
-  ['mainmenu_2',['MainMenu',['../namespace_main_menu.html',1,'']]],
-  ['menu_5fsystem_3',['MENU_SYSTEM',['../_app_logger_8cs.html#a7f0f7a40f3e428717396a639863ef902afd9e5aeded182ad1bb7f263b842ac081',1,'AppLogger.cs']]],
-  ['movementtesting_4',['MovementTesting',['../class_player_1_1_movement_testing.html',1,'Player']]],
-  ['movementtesting_2ecs_5',['MovementTesting.cs',['../_movement_testing_8cs.html',1,'']]],
-  ['shop_6',['Shop',['../namespace_main_menu_1_1_shop.html',1,'MainMenu']]]
+  ['difficultysettings_0',['DifficultySettings',['../namespace_level_1_1_difficulty_settings.html',1,'Level']]],
+  ['land_1',['Land',['../namespace_player.html#a9af3a04191ca256d2c730189552ffd32a512ef7c688a2c8572d5e16f44e17e869',1,'Player']]],
+  ['left_2',['LEFT',['../class_enemy_1_1_shooting_enemy_1_1_shooting_enemy.html#a4311e3108cb209d739a7aace3a892d70a684d325a7303f52e64011467ff5c5758',1,'Enemy::ShootingEnemy::ShootingEnemy']]],
+  ['leftbutton_3',['leftButton',['../class_main_menu_1_1_level_selection_presenter.html#afe270d616570739820c171f2bf9e14d0',1,'MainMenu::LevelSelectionPresenter']]],
+  ['level_4',['Level',['../namespace_level.html',1,'']]],
+  ['level_5',['LEVEL',['../namespace_core_systems_1_1_scene_system.html#aa27913a26162399e428fcbf01a744950aec46cfef93df98a48cda0c5df179485e',1,'CoreSystems::SceneSystem']]],
+  ['level_5fexit_6',['LEVEL_EXIT',['../namespace_core_systems_1_1_menu_system.html#ac08aab0a35ecfe277d57c1cb295b1283a594422b5059af3ff8bea81c0c76a06c5',1,'CoreSystems::MenuSystem']]],
+  ['level_5fload_7',['LEVEL_LOAD',['../namespace_core_systems_1_1_menu_system.html#ac08aab0a35ecfe277d57c1cb295b1283a5a28ec1d0f8266c4dd58aa3c468b1d10',1,'CoreSystems::MenuSystem']]],
+  ['levelend_8',['LevelEnd',['../class_level_1_1_level_end.html',1,'Level']]],
+  ['levelend_2ecs_9',['LevelEnd.cs',['../_level_end_8cs.html',1,'']]],
+  ['levelselectionpresenter_10',['LevelSelectionPresenter',['../class_main_menu_1_1_level_selection_presenter.html',1,'MainMenu']]],
+  ['levelselectionpresenter_2ecs_11',['LevelSelectionPresenter.cs',['../_level_selection_presenter_8cs.html',1,'']]],
+  ['leveltext_12',['levelText',['../class_main_menu_1_1_level_selection_presenter.html#a395aad09a2f21273588187beab51e310',1,'MainMenu::LevelSelectionPresenter']]],
+  ['life_13',['LIFE',['../namespace_core_systems_1_1_save_load_system.html#adf3dbcb9025ffcacfcecdd55294878e5a5ecda69de560d87396f0ba688675083a',1,'CoreSystems::SaveLoadSystem']]],
+  ['load_14',['Load',['../class_core_systems_1_1_scene_system_1_1_scene_controller.html#ab2191ffbef5e4fb8c822102eb723b038',1,'CoreSystems::SceneSystem::SceneController']]],
+  ['loadlevel_15',['LoadLevel',['../class_core_systems_1_1_scene_system_1_1_scene_controller.html#a1609e57156eb49fdedf6afc92353d098',1,'CoreSystems.SceneSystem.SceneController.LoadLevel()'],['../class_main_menu_1_1_level_selection_presenter.html#ad88f525896af12216e8e41e1792532e8',1,'MainMenu.LevelSelectionPresenter.LoadLevel()']]],
+  ['localization_5fmenu_16',['LOCALIZATION_MENU',['../namespace_core_systems_1_1_menu_system.html#ac08aab0a35ecfe277d57c1cb295b1283a18148c77ce4cc2ff8493578dcd95d80a',1,'CoreSystems::MenuSystem']]],
+  ['localizationmanager_17',['LocalizationManager',['../class_main_menu_1_1_localization_manager.html',1,'MainMenu']]],
+  ['localizationmanager_2ecs_18',['LocalizationManager.cs',['../_localization_manager_8cs.html',1,'']]]
 ];

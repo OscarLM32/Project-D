@@ -1,5 +1,8 @@
 var searchData=
 [
   ['debug_0',['debug',['../class_core_systems_1_1_audio_system_1_1_audio_controller.html#a0cb3f76c73c06859874474e0d7ec4a5e',1,'CoreSystems.AudioSystem.AudioController.debug()'],['../class_core_systems_1_1_menu_system_1_1_page.html#aa1b30ab4472832fae1ecfee66a70c210',1,'CoreSystems.MenuSystem.Page.debug()'],['../class_core_systems_1_1_menu_system_1_1_page_controller.html#a913a1fe6a09c066cc067a16394932d70',1,'CoreSystems.MenuSystem.PageController.debug()'],['../class_core_systems_1_1_scene_system_1_1_scene_controller.html#adaa3f03ec40fcc0db69affb4fe8c735d',1,'CoreSystems.SceneSystem.SceneController.debug()'],['../class_player_1_1_player.html#a78dfd69508622f11b54eb5209b6e0109',1,'Player.Player.debug()'],['../class_player_1_1_player_movement.html#a7d5b302796e88e31bffbd1b7ef6f5dd6',1,'Player.PlayerMovement.debug()']]],
-  ['display_1',['display',['../class_main_menu_1_1_extras_1_1_extra.html#a51e4a441bec0a66ff73c164b809fc820',1,'MainMenu::Extras::Extra']]]
+  ['destroyclip_1',['destroyClip',['../class_enemy_projectile.html#abb8f3eaf0406ab28eeee4de89ce0ff0d',1,'EnemyProjectile']]],
+  ['difficulty_2',['difficulty',['../class_level_1_1_game_manager.html#a63c2b9c7c26aadd52b13d4ca52bd3b7f',1,'Level::GameManager']]],
+  ['difficultysettings_3',['difficultySettings',['../class_enemy_1_1_shooting_enemy_1_1_shooting_enemy.html#a43e81d9565eb02142694d87b973baf19',1,'Enemy.ShootingEnemy.ShootingEnemy.difficultySettings()'],['../class_enemy_1_1_spikes.html#aeaf4ff4939922e2d6f48fd4467bd475a',1,'Enemy.Spikes.difficultySettings()'],['../class_level_1_1_game_manager.html#a5bb9fefdac74092fb4f2a1ae69a94921',1,'Level.GameManager.difficultySettings()']]],
+  ['display_4',['display',['../class_main_menu_1_1_extras_1_1_extra.html#a51e4a441bec0a66ff73c164b809fc820',1,'MainMenu::Extras::Extra']]]
 ];

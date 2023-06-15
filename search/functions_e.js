@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['throw_0',['Throw',['../class_player_weapon.html#afa4719fd1c6913730656153881921d7b',1,'PlayerWeapon']]]
+  ['upgradebought_0',['UpgradeBought',['../class_core_systems_1_1_save_load_system_1_1_save_load_manager.html#a95a3fc87ca9075849dd8bd348362342a',1,'CoreSystems::SaveLoadSystem::SaveLoadManager']]]
 ];

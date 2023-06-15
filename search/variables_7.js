@@ -7,5 +7,8 @@ var searchData=
   ['player_4',['player',['../class_level_1_1_free_look2_d_camera.html#a01676e138279de400b04b939eeefbe79',1,'Level::FreeLook2DCamera']]],
   ['playerinput_5',['playerInput',['../class_core_systems_1_1_input_system_1_1_input_manager.html#a5b3987bc0261f9037b8d677c650159c3',1,'CoreSystems::InputSystem::InputManager']]],
   ['position_6',['position',['../class_items_1_1_classified_document.html#af3cc94dc074c211d53175b800f0e4b33',1,'Items::ClassifiedDocument']]],
-  ['prices_7',['prices',['../class_main_menu_1_1_shop_1_1_s_o_upgrade_prices.html#af018c0f4aba2a2049694607c5ff04851',1,'MainMenu::Shop::SOUpgradePrices']]]
+  ['prices_7',['prices',['../class_main_menu_1_1_shop_1_1_s_o_upgrade_prices.html#af018c0f4aba2a2049694607c5ff04851',1,'MainMenu::Shop::SOUpgradePrices']]],
+  ['projectileprefabs_8',['projectilePrefabs',['../class_enemy_projectile_pool.html#ac616bc55783ef08372aefc61348a7bfb',1,'EnemyProjectilePool']]],
+  ['projectiletype_9',['projectileType',['../class_enemy_1_1_shooting_enemy_1_1_shooting_enemy.html#af5359d1f5636c9cbe84700c61aea2957',1,'Enemy::ShootingEnemy::ShootingEnemy']]],
+  ['projectiletypesinlevel_10',['projectileTypesInLevel',['../class_enemy_projectile_pool.html#a65bfa7ee8284619daff55793fc3f6399',1,'EnemyProjectilePool']]]
 ];

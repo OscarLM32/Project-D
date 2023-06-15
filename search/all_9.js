@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kill_0',['Kill',['../class_player_1_1_player.html#a0ee11f0afd0d108625064bbb5c36bf8a',1,'Player::Player']]]
+  ['jump_0',['Jump',['../namespace_player.html#a9af3a04191ca256d2c730189552ffd32a101f693f72287a2819a364f64ca1c0ed',1,'Player']]]
 ];

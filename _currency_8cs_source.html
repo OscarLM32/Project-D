@@ -109,37 +109,31 @@ $(document).ready(function(){initNavTree('_currency_8cs_source.html',''); initRe
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_class" href="class_items_1_1_currency.html">Currency</a> : MonoBehaviour, <a class="code hl_interface" href="interface_items_1_1_i_pickable.html">IPickable</a></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">private</span> Animator _animator;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">private</span> AudioSource _source;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> Collider2D _collider; </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html#ad4c41c3f9457a210dd37657677939f37">   15</a></span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_items_1_1_currency.html#ad4c41c3f9457a210dd37657677939f37">Start</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            _animator = GetComponent&lt;Animator&gt;();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            _source = GetComponent&lt;AudioSource&gt;();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            _collider = GetComponent&lt;Collider2D&gt;(); </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html#a29bab7a1f82791369e0ca62d32b2b3e5">   25</a></span>        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_items_1_1_currency.html#a29bab7a1f82791369e0ca62d32b2b3e5">PickUp</a>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html#a0e5b2750b55f4801c8f7b060806b3dbb">   31</a></span>        <span class="keyword">protected</span> IEnumerator <a class="code hl_function" href="class_items_1_1_currency.html#a0e5b2750b55f4801c8f7b060806b3dbb">PickUpAction</a>()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            _animator.Play(<span class="stringliteral">&quot;Collection&quot;</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            _source.Play();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            _collider.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">while</span> (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime &lt; 1)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            Destroy(gameObject);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }  </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">private</span> AudioSource _source;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">private</span> Collider2D _collider; </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html#ad4c41c3f9457a210dd37657677939f37">   14</a></span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_items_1_1_currency.html#ad4c41c3f9457a210dd37657677939f37">Start</a>()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            _source = GetComponent&lt;AudioSource&gt;();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            _collider = GetComponent&lt;Collider2D&gt;(); </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html#a29bab7a1f82791369e0ca62d32b2b3e5">   23</a></span>        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_items_1_1_currency.html#a29bab7a1f82791369e0ca62d32b2b3e5">PickUp</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_items_1_1_currency.html#a0e5b2750b55f4801c8f7b060806b3dbb">   29</a></span>        <span class="keyword">protected</span> IEnumerator <a class="code hl_function" href="class_items_1_1_currency.html#a0e5b2750b55f4801c8f7b060806b3dbb">PickUpAction</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            _source.Play();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            _collider.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(0.1f);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            Destroy(gameObject);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }  </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
 <div class="ttc" id="aclass_items_1_1_currency_html"><div class="ttname"><a href="class_items_1_1_currency.html">Items.Currency</a></div><div class="ttdoc">Defines the behaviour of any type of currency pickable during a level.</div><div class="ttdef"><b>Definition:</b> <a href="_currency_8cs_source.html#l00009">Currency.cs:10</a></div></div>
-<div class="ttc" id="aclass_items_1_1_currency_html_a0e5b2750b55f4801c8f7b060806b3dbb"><div class="ttname"><a href="class_items_1_1_currency.html#a0e5b2750b55f4801c8f7b060806b3dbb">Items.Currency.PickUpAction</a></div><div class="ttdeci">IEnumerator PickUpAction()</div><div class="ttdoc">The action to be performed whenever the currency is picked up.</div><div class="ttdef"><b>Definition:</b> <a href="_currency_8cs_source.html#l00031">Currency.cs:31</a></div></div>
+<div class="ttc" id="aclass_items_1_1_currency_html_a0e5b2750b55f4801c8f7b060806b3dbb"><div class="ttname"><a href="class_items_1_1_currency.html#a0e5b2750b55f4801c8f7b060806b3dbb">Items.Currency.PickUpAction</a></div><div class="ttdeci">IEnumerator PickUpAction()</div><div class="ttdoc">The action to be performed whenever the currency is picked up.</div><div class="ttdef"><b>Definition:</b> <a href="_currency_8cs_source.html#l00029">Currency.cs:29</a></div></div>
 <div class="ttc" id="aclass_items_1_1_currency_html_a29bab7a1f82791369e0ca62d32b2b3e5"><div class="ttname"><a href="class_items_1_1_currency.html#a29bab7a1f82791369e0ca62d32b2b3e5">Items.Currency.PickUp</a></div><div class="ttdeci">abstract void PickUp()</div><div class="ttdoc">Hides the method PickUp by IPickable and turn it into an abstract method.</div></div>
-<div class="ttc" id="aclass_items_1_1_currency_html_ad4c41c3f9457a210dd37657677939f37"><div class="ttname"><a href="class_items_1_1_currency.html#ad4c41c3f9457a210dd37657677939f37">Items.Currency.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_currency_8cs_source.html#l00015">Currency.cs:15</a></div></div>
+<div class="ttc" id="aclass_items_1_1_currency_html_ad4c41c3f9457a210dd37657677939f37"><div class="ttname"><a href="class_items_1_1_currency.html#ad4c41c3f9457a210dd37657677939f37">Items.Currency.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_currency_8cs_source.html#l00014">Currency.cs:14</a></div></div>
 <div class="ttc" id="ainterface_items_1_1_i_pickable_html"><div class="ttname"><a href="interface_items_1_1_i_pickable.html">Items.IPickable</a></div><div class="ttdoc">Class that every pickable object in the level extends from.</div><div class="ttdef"><b>Definition:</b> <a href="_i_pickable_8cs_source.html#l00007">IPickable.cs:8</a></div></div>
 <div class="ttc" id="anamespace_items_html"><div class="ttname"><a href="namespace_items.html">Items</a></div><div class="ttdef"><b>Definition:</b> <a href="_classified_document_8cs_source.html#l00005">ClassifiedDocument.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
