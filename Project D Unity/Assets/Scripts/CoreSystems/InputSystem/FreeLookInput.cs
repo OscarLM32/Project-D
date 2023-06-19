@@ -107,7 +107,7 @@ namespace CoreSystems.InputSystem
         private void HandleMovement()
         {
             var touch = _touches[0];
-            _offset -= touch.deltaPosition * Time.deltaTime;
+            _offset -= touch.deltaPosition * (Time.deltaTime * 0.33f);
             FreeLookCameraMove?.Invoke(_offset);
         }
     }

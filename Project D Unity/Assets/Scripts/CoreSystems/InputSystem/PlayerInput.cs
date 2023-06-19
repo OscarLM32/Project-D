@@ -14,10 +14,11 @@ namespace CoreSystems.InputSystem
         /// <summary>
         /// Minimum distance you have to swipe
         /// </summary>
-        private const float _minSwipeDistance = 10f;
+        private const float _minSwipeDistance = 40f;
         
         private Vector2 _travelledDistance;
         private Vector2 _touchPoint;
+        private Vector2 _lastSwipePointOffSet = Vector2.zero;
         
         
         private void Update()
@@ -62,6 +63,8 @@ namespace CoreSystems.InputSystem
         private void OnTouchMoved(Touch touch)
         {
             _travelledDistance = CalculateTravelledDistance(touch);
+            _travelledDistance -= _lastSwipePointOffSet;
+            //Debug.Log(_travelledDistance);
             if (CheckSwipeDone())
             {
                 HandleSwipe();
@@ -78,6 +81,10 @@ namespace CoreSystems.InputSystem
             var distance = Vector2.Distance(_touchPoint, touch.position);
             var pos = touch.position - _touchPoint;
             var angle = Math.Atan2(pos.x, pos.y);
+            
+            /*Debug.Log($"[PLAYER_INPUT]: Distance -> {distance} \n" +
+                      $"Position -> {pos} \n" +
+                      $"Angle -> {angle}");*/
 
             return new Vector2(distance * (float)Math.Sin(angle), distance * (float)Math.Cos(angle));
         }

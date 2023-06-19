@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Level;
 using Level.DifficultySettings;
 using UnityEngine;
@@ -46,17 +47,25 @@ namespace Enemy
         /// <param name="other">The other gameobject</param>
         private void OnTriggerEnter2D(Collider2D other)
         {
-            var player = other.GetComponent<Player.Player>();
+            var player = other.GetComponent<Player.Player>(); 
             if (!player) return;
             
             if (!_isTrapActivated && !_trapBeingActivated)
             {
                 StartCoroutine(ActivateTrap());
             }
-            else if(_isTrapActivated)
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            Debug.Log("OnTriggerStay " + Time.time);
+            var player = other.transform.GetComponent<Player.Player>(); 
+            if(_isTrapActivated)
             {
+                Debug.Log("I kill");
                 player.Kill();
-            }
+                _isTrapActivated = false;
+            } 
         }
 
         /// <summary>
@@ -79,6 +88,7 @@ namespace Enemy
         /// <returns>A routine</returns>
         private IEnumerator ActivateTrap()
         {
+            Debug.Log("Activating trap " + Time.time);
             _animator.enabled = true;
             _animator.Play(SpikesPrepare); 
             _trapBeingActivated = true;
@@ -90,7 +100,7 @@ namespace Enemy
             _isTrapActivated = true;
             _trapBeingActivated = false;
 
-            yield return StartCoroutine(DeactivateTrap());
+            StartCoroutine(DeactivateTrap());
         }
         
             
@@ -100,6 +110,7 @@ namespace Enemy
         /// <returns>A routine</returns>
         private IEnumerator DeactivateTrap()
         {
+            Debug.Log("DeactivatingTrap " + Time.time);
             while (!_animator.GetCurrentAnimatorStateInfo(0).IsName(SpikesOut))
             {
                 yield return null;

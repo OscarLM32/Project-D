@@ -79,9 +79,11 @@ namespace MainMenu.Extras
                 LocalizedString table = new LocalizedString
                 {
                     TableReference = StringTables.Dynamic_UI.ToString(),
-                    TableEntryReference = "EXTRA_STORY_"+(i+1)
-                };
-                var story = table.GetLocalizedString(); 
+                    TableEntryReference = "EXTRA_STORY_"+(i+1),
+                    WaitForCompletion = true
+                }; 
+                
+                var story = table.GetLocalizedString();
                 extra.value = extrasInformation.values[i];
                 extra.story = story;
             }
