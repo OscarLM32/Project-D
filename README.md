@@ -5,7 +5,6 @@
 ## Implementation summary
 
 ### Movement
-
 |![Movement](./static/Movement.gif)|
 |----------------------------------|
 
@@ -19,27 +18,26 @@
 ### Other Mechanics, Rules and Implementation
 The game currently implements the followign mechancis and rules.
 
-#### Localization System: available in Spanish and English
+#### Localization System
+Game available in Spanish and English
 
 #### Different level difficulties: the different levels can take up to 3 different difficulties
-- **Easy** 
-  - 1 extra life
-  - 10 extra seconds
-  - Spike trap takes longer to activate
-  - Shooting trap 
-- **Normal**
-  - No extra lives.
-  - No extra time.
-- **Hard** 
-  - -1 extra life (limited at a minimun of 1)
-  - -10 extra seconds
+|Easy|Normal|Hard|
+|:---|:-----|:---|
+| - 1 extra life <br> - 10 extra seconds <br> - LOnger trap activation delay |  - No extra lives <br> - No extra time <br> - No extra trap activation delay | - -1 extra life <br> - -10 extra seconds <br> - Shorter trap actvatioh delay|
 
-#### Currencies:
 
+#### Currencies
 There are two types of currencies: coins and gems. Coins are used to buy upgrades and can be obtained inside levels with no limit (every time a level is played, the same amount of
 coins will appear). Gems are obtained inside levels too. However, these gems can only be picked up once per level, they will not appear on further replays of the levels once they have been collected and they are used to unlock extra content inside the game.
 
- #### Upgrades: extra time and lives upgrades can be bought to make levels easier to beat
-
- ![Buy Upgrades](./static/Upgrades.gif)
+#### Extras
+Extra page where contetn related to the games' lore can be unlocked
  
+#### Upgrades
+Extra time and lives upgrades can be bought to make levels easier to beat
+
+|![Buy Upgrades](./static/Upgrades.gif)|
+|--------------------------------------|
+
+
