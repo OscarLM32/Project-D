@@ -24,7 +24,7 @@ Game available in Spanish and English
 #### Different level difficulties: the different levels can take up to 3 different difficulties
 |Easy|Normal|Hard|
 |:---|:-----|:---|
-| - 1 extra life <br> - 10 extra seconds <br> - LOnger trap activation delay |  - No extra lives <br> - No extra time <br> - No extra trap activation delay | - -1 extra life <br> - -10 extra seconds <br> - Shorter trap actvation delay|
+| - 1 extra life <br> - 10 extra seconds <br> - Longer trap activation delay |  - No extra lives <br> - No extra time <br> - No extra trap activation delay | - -1 extra life <br> - -10 extra seconds <br> - Shorter trap actvation delay|
 
 
 #### Currencies
